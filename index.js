@@ -24,20 +24,11 @@ function generateRandomPassword() {
     return randomPassword
 }
 
-function generateRandomPassword2() {
-    let randomPassword2 = ""
-    for (let i = 0; i < passwordLength; i++) {
-        randomPassword2 += getRandomCharacter()
-    }
-    return randomPassword2
-}
-
-const generatedPasswordOne = generateRandomPassword()
-const generatedPasswordTwo = generateRandomPassword()
 
 generateButton.addEventListener("click", function () {
-    yourPassword.textContent = generatedPasswordOne
-    yourPasswordTwo.textContent = generatedPasswordTwo
+    yourPassword.textContent = generateRandomPassword()
+    yourPasswordTwo.textContent = generateRandomPassword()
 })
+
 
 
